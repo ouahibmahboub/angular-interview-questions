@@ -1,6 +1,6 @@
 # Angular Interview Questions & Answers
 
-> Click :star:if you like the project and follow [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates. PDF and Epub versions are available at [actions tab](https://github.com/sudheerj/angular-interview-questions/actions).
+> Click :star:if you like the project and follow [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates. PDF and Epub versions are available at [actions tab](https://github.com/sudheerj/angular-interview-questions/actions).:star:
 
 ---
 
@@ -331,6 +331,19 @@ You can download the PDF and Epub version of this repository from the latest run
 |278| [How to create a standalone component manually?](#how-to-create-a-standalone-component-manually)
 |279| [](#)
 
+0. ### Différence entre MVC et MVVM?
+
+    En regardant simplement leurs noms, il apparaît que la principale différence entre MVC et MVVM est qu’un contrôleur est remplacé par un ViewModel. Cette idée est fausse.
+Les deux contiennent un contrôleur. En fait, chaque projet logiciel a un contrôleur, car chaque projet logiciel manipule des données.
+Les deux contiennent également ViewModel, car les deux architectures nécessitent que les données soient mappées d’un Modèle à une Vue.
+La principale différence entre les deux architectures réside dans la richesse et la complexité du ViewModel.
+Dans un projet plus MVVM, le ViewModel est important. Il garde une trace de son propre état interne, c’est-à-dire que le client peut effectuer des manipulations de données temporaires qui ne sont pas communiquées au contrôleur. À titre d’exemple, les projets React et Angular entrent dans cette catégorie.
+-Le modèle MVVM prend en charge la liaison de données(data binding) bidirectionnelle entre View et ViewModel.
+-Le ViewModel utilise le pattern observer pour informer les modifications du ViewModel au modèle.
+-MVC est un design pattern de logiciels, Cela provoque une séparation de préoccupations,
+
+  **[⬆ Back to Top](#table-of-contents)**
+
 1. ### What is Angular Framework?
 
     Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build web, mobile and desktop applications. The major features of this framework include declarative templates, dependency injection, end to end tooling which ease application development.
@@ -502,7 +515,8 @@ You can download the PDF and Epub version of this repository from the latest run
     2. The declarations option is used to define components in the respective module.
     3. The bootstrap option tells Angular which Component to bootstrap in the application.
     4. The providers option is used to configure a set of injectable objects that are available in the injector of this module.
-    5. The entryComponents option is a set of components dynamically loaded into the view.
+    5. The entryComponents option is a set of components dynamically loaded into the view. 
+    (:star::star::star:**HIB**: The entryComponents are only loaded dynamically and are never referenced in the component template. It refers to the array of components that are not found in HTML, instead are added by the ComponentFactoryResolver).
 
   **[⬆ Back to Top](#table-of-contents)**
 
